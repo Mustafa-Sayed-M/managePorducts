@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Products Manage CRUDS">
+    <!-- Css Custom File -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Css Bootstrap File -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Css Font Awesome File -->
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <!-- Float Message -->
+    <div id="floatMessage" class="rounded-3 text-light p-2 text-center position-fixed start-50 translate-middle-x bottom-0 mb-5 transition" style="width: 150px; background-color: rgba(0, 0, 0, .5);">10</div>
+    <!-- Start App -->
+    <div id="app">
+        <div class="container pt-5 pb-5 text-center text-light">
+            <!-- Head Text -->
+            <div class="headText mb-5">
+                <h1 class="m-0 fw-bold">CRUDS</h1>
+                <p class="m-0">CREATE READ UPDATE DELETE SEARCH</p>
+            </div>
+            <!-- Inputs -->
+            <div class="inputs mb-5">
+                <!-- Title -->
+                <h4 class="titleSection mb-4 pb-2 text-start position-relative" style="width: fit-content;">Details Your Product</h4>
+                <form action="" method="get" onsubmit="preventDefault(event)">
+                    <input id="title" type="text" placeholder="Title" class="bg-black text-light border-0 rounded-2 d-block w-100 mb-2 p-2">
+                    <input onkeyup="setTotalPrice()" id="taxes" type="number" placeholder="Taxes" class="bg-black text-light border-0 rounded-2 d-block w-100 mb-2 p-2">
+                    <input onkeyup="setTotalPrice()" id="price" type="number" placeholder="Price" class="bg-black text-light border-0 rounded-2 d-block w-100 mb-2 p-2">
+                    <input onkeyup="setTotalPrice()" id="ads" type="number" placeholder="Ads" class="bg-black text-light border-0 rounded-2 d-block w-100 mb-2 p-2">
+                    <input onkeyup="setTotalPrice()" id="discount" type="number" placeholder="Discount" class="bg-black text-light border-0 rounded-2 d-block w-100 mb-2 p-2">
+                    <input onkeyup="setTotalPrice()" id="count" type="number" placeholder="Count" class="bg-black text-light border-0 rounded-2 d-block w-100 mb-2 p-2">
+                    <input id="category" type="text" placeholder="Category" class="bg-black text-light border-0 rounded-2 d-block w-100 mb-4 p-2">
+                    <div id="total-price" class="bg-primary mb-4 p-2 rounded-2">Total is: <span>0</span></div>
+                    <button id="btn-create-pro" type="submit" class="w-100 border-0 rounded-2 p-2 btn btn-success">Create</button>
+                </form>
+            </div>
+            <!-- Outputs -->
+            <div class="outputs mb-5">
+                <!-- Title -->
+                <h4 class="titleSection mb-4 pb-2 text-start position-relative" style="width: fit-content;">Search in Your Product</h4>
+                <input id="search" type="search" placeholder="Search" class="bg-black text-light border-0 rounded-2 d-block w-100 mb-3 p-2">
+                <div class="buttons">
+                    <div class="searchButtons d-flex align-items-center justify-content-between mb-3 gap-3">
+                        <button type="button" id="btn-search-by-title" class="w-100 border-0 rounded-2 p-2 btn btn-success">Search By Title</button>
+                        <button type="button" id="btn-search-by-category" class="w-100 border-0 rounded-2 p-2 btn btn-success">Search By Category</button>
+                    </div>
+                    <button type="button" id="btn-delete-all" class="w-100 border-0 rounded-2 p-2 btn btn-danger">Delete All <span class="countProdcuts">(0)</span></button>
+                </div>
+            </div>
+            <!-- Products -->
+            <div class="products py-4 overflow-x-scroll">
+                <!-- Title -->
+                <h4 class="titleSection mb-4 pb-2 text-start position-relative" style="width: fit-content;">Your Products</h4>
+                <table class="w-100">
+                    <!-- Head Table -->
+                    <thead>
+                        <tr>
+                            <td class="text-uppercase border-bottom p-2">id</td>
+                            <td class="text-uppercase border-bottom p-2">title</td>
+                            <td class="text-uppercase border-bottom p-2">price</td>
+                            <td class="text-uppercase border-bottom p-2">taxes</td>
+                            <td class="text-uppercase border-bottom p-2">ads</td>
+                            <td class="text-uppercase border-bottom p-2">discount</td>
+                            <td class="text-uppercase border-bottom p-2">category</td>
+                            <td class="text-uppercase border-bottom p-2">update</td>
+                            <td class="text-uppercase border-bottom p-2">delete</td>
+                        </tr>
+                    </thead>
+                    <!-- Body Table -->
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="py-2 bgMainColor">
+        <p class="m-0 text-center text-light">Create By Mustafa Sayed - 2023</p>
+    </footer>
+    <!-- End App -->
+    <!-- Js Popper File -->
+    <script src="js/popper.js"></script>
+    <!-- Js Bootstrap File -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Js Main File -->
+    <script src="js/main.js"></script>
+</body>
+</html>
